@@ -1,8 +1,32 @@
 <!DOCTYPE html>
-<head>
-  <title>Google</title>
-  <meta charset="utf-8">
-</head>
-<body>
-  <iframe src="https://youtube.com/embed/DlzYVUnqX38" width="1080" height="720"></iframe>
-</body>
+<html>
+  <head>
+    <title>Google</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <input type="text" id="videoIdInput" placeholder="例: DlzYVUnqX38">
+    <button onclick="loadVideo()">読み込む</button>
+    
+    <div id="playerContainer" style="margin-top: 20px;">
+      <iframe
+        src=""
+        width="720"
+        height="480"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+        </iframe>
+    </div>
+  </body>
+  <script>
+    function loadVideo() {
+      const videoId = document.getElementById("videoIdInput").value.trim();
+      if (videoId) {
+        const iframe = document.getElementById("youtubePlayer");
+        iframe.src = `https://www.youtube.com/embed/${videoId}`;
+      } else {
+        alert("動画IDを入力してください。");
+      }
+    }
+  </script>
+</html>
