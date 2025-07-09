@@ -15,19 +15,20 @@
         width="720"
         height="480"
         frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
         </iframe>
     </div>
-  </body>
-  <script>
-    function loadVideo() {
-      const videoId = document.getElementById("videoIdInput").value.trim();
-      if (videoId) {
-        const iframe = document.getElementById("youtubePlayer");
-        iframe.src = `https://www.youtube.com/embed/${videoId}`;
-      } else {
-        alert("動画IDを入力してください。");
+    <script>
+      function loadVideo() {
+        const videoId = document.getElementById("videoIdInput").value.trim();
+        if (videoId) {
+          const iframe = document.getElementById("youtubePlayer");
+          iframe.src = `https://www.youtube.com/embed/${videoId}`;
+        } else {
+          alert("動画IDを入力してください。");
+        }
       }
-    }
-  </script>
+    </script>
+  </body>
 </html>
